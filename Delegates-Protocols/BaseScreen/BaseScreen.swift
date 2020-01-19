@@ -20,18 +20,7 @@ class BaseScreen: UIViewController {
         let storyboard = UIStoryboard(name: "SelectionScreen", bundle: nil)
         let selectionVC = storyboard.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
         
-        selectionVC.selectionDelegate = self
         present(selectionVC, animated: true, completion: nil)
     }
 }
 
-
-extension BaseScreen: SideSelectionDelegate {
-    
-    func didTapChoice(image: UIImage, name: String, color: UIColor) {
-        mainImageView.image = image
-        nameLabel.text = name
-        view.backgroundColor = color
-    }
-    
-}
