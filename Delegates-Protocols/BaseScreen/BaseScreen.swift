@@ -20,6 +20,12 @@ class BaseScreen: UIViewController {
         let storyboard = UIStoryboard(name: "SelectionScreen", bundle: nil)
         let selectionVC = storyboard.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
         
+        selectionVC.chosenSide = { [weak self] (imageName, labelText, color) in
+            self?.mainImageView.image = UIImage(named: imageName)
+            self?.nameLabel.text = labelText
+            self?.view.backgroundColor = color
+        }
+        
         present(selectionVC, animated: true, completion: nil)
     }
 }
