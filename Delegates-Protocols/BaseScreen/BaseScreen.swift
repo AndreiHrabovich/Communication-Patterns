@@ -17,7 +17,9 @@ class BaseScreen: UIViewController {
     }
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
-        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
+        let storyboard = UIStoryboard(name: "SelectionScreen", bundle: nil)
+        let selectionVC = storyboard.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
+        
         selectionVC.selectionDelegate = self
         present(selectionVC, animated: true, completion: nil)
     }
