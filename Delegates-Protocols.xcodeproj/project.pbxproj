@@ -13,6 +13,7 @@
 		EDB4DBAD1ED104670005E5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4DBAB1ED104670005E5B3 /* LaunchScreen.storyboard */; };
 		EDB4DBB51ED1049A0005E5B3 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DBB41ED1049A0005E5B3 /* BaseScreen.swift */; };
 		EDB4DBB71ED10BA20005E5B3 /* SelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4DBB61ED10BA20005E5B3 /* SelectionScreen.swift */; };
+		F78654D524043F92009E0B83 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78654D424043F92009E0B83 /* Side.swift */; };
 		F7BB2E3923D45FF5007FFD06 /* SelectionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7BB2E3823D45FF5007FFD06 /* SelectionScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		EDB4DBAE1ED104670005E5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB4DBB41ED1049A0005E5B3 /* BaseScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		EDB4DBB61ED10BA20005E5B3 /* SelectionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionScreen.swift; sourceTree = "<group>"; };
+		F78654D424043F92009E0B83 /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
 		F7BB2E3823D45FF5007FFD06 /* SelectionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectionScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 		EDB4DBA11ED104670005E5B3 /* Delegates-Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F78654D624043FA0009E0B83 /* Model */,
 				F7BB2E3723D45FA6007FFD06 /* SelectionScreen */,
 				F7BB2E3523D45F63007FFD06 /* BaseScreen */,
 				EDB4DBA21ED104670005E5B3 /* AppDelegate.swift */,
@@ -66,6 +69,14 @@
 				EDB4DBAE1ED104670005E5B3 /* Info.plist */,
 			);
 			path = "Delegates-Protocols";
+			sourceTree = "<group>";
+		};
+		F78654D624043FA0009E0B83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F78654D424043F92009E0B83 /* Side.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F7BB2E3523D45F63007FFD06 /* BaseScreen */ = {
@@ -162,6 +173,7 @@
 			files = (
 				EDB4DBB51ED1049A0005E5B3 /* BaseScreen.swift in Sources */,
 				EDB4DBA31ED104670005E5B3 /* AppDelegate.swift in Sources */,
+				F78654D524043F92009E0B83 /* Side.swift in Sources */,
 				EDB4DBB71ED10BA20005E5B3 /* SelectionScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

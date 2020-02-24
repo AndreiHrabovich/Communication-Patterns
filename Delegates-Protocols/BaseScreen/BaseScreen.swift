@@ -2,7 +2,6 @@
 import UIKit
 
 class BaseScreen: UIViewController {
-
     @IBOutlet private weak var mainImageView: UIImageView!
     @IBOutlet private weak var chooseButton: UIButton!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -18,12 +17,12 @@ class BaseScreen: UIViewController {
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "SelectionScreen", bundle: nil)
-        let selectionVC = storyboard.instantiateViewController(withIdentifier: "SelectionScreen") as! SelectionScreen
+        guard let selectionVC = storyboard.instantiateViewController(withIdentifier: "SelectionScreen") as? SelectionScreen else { return }
         
-        selectionVC.chosenSide = { [weak self] (imageName, labelText, color) in
-            self?.mainImageView.image = UIImage(named: imageName)
-            self?.nameLabel.text = labelText
-            self?.view.backgroundColor = color
+        selectionVC.onSideChosen = { [weak self] (side) in
+            self?.mainImageView.image = UIImage(named: side.name)
+            self?.nameLabel.text = side.text
+            self?.view.backgroundColor = side.isRebel ? UIColor.blue : UIColor.red
         }
         
         present(selectionVC, animated: true, completion: nil)
